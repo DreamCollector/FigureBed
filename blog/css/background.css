@@ -1,0 +1,37 @@
+
+
+/* 文章页背景以及暗色主题，透明度为0.9 */
+.layout > div:first-child:not(.recent-posts) {
+   background: rgba(255, 255, 255, 0.8);
+  /*background: var(--light_bg_color);*/
+}
+[data-theme=dark] .layout > div:first-child:not(.recent-posts) {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* 所有背景（包括首页卡片、文章页、页面页等） */
+#recent-posts > .recent-post-item,
+.layout > div:first-child:not(.recent-posts),
+.layout_post > #page,
+.layout_post > #post,
+.read-mode .layout_post > #post {
+  /*background: var(--light_bg_color);*/
+  background: rgba(255, 255, 255, 0.8);
+}
+[data-theme=dark] #recent-posts>.recent-post-item,
+[data-theme=dark] .layout>div:first-child:not(.recent-posts),
+[data-theme=dark] .layout_post>#page,
+[data-theme=dark] .layout_post>#post,
+[data-theme=dark] .read-mode .layout_post>#post {
+  /*background: var(--dark_page_color);*/
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#aside-content .card-widget {
+  /*background: var(--light_bg_color);*/
+    background: rgba(255, 255, 255, 0.8);
+}
+[data-theme=dark] #aside-content .card-widget {
+  /*background: var(--dark_bg_color)*/
+    background: rgba(0, 0, 0, 0.4);
+}
