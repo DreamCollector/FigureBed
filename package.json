@@ -1,0 +1,22 @@
+{
+  "name": "pzai-staticr",
+  "version": "1.0.1",
+  "description": "Pzai静态资源",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DreamCollector/FigureBed.git"
+  },
+  "keywords": [
+    "static"
+  ],
+  "author": "DreamCollector",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DreamCollector/FigureBed/issues"
+  },
+  "homepage": "https://github.com/DreamCollector/FigureBed#readme"
+}
