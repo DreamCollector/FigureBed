@@ -1,151 +1,3 @@
-/* --------------------宽屏适配-------------------- */
-.layout {
-    max-width: 1400px;
-}
-
-.layout.hide-aside {
-    max-width: 1043px;
-}
-
-.aside-content {
-    max-width: 312px;
-    min-width: 300px;
-}
-
-@media screen and (max-width: 900px) {
-    .aside-content {
-        max-width: none !important;
-    }
-}
-
-/* --------------------翻页按钮居中-------------------- */
-#pagination {
-    width: 100%;
-    margin: auto;
-}
-
-#pagination .page-number.current {
-    background: #49B1F5 !important;
-    color: var(--white);
-}
-
-/* --------------------文章上下页圆角样式-------------------- */
-.pagination-post {
-    border-radius: 8px;
-}
-
-/* --------------------一图化背景-------------------- */
-/* 头图透明 */
-#page-header {
-    background: transparent !important;
-}
-
-/*头图黑色透明玻璃效果移除 */
-/*#page-header.post-bg:before {*/
-/*  background-color: transparent!important;*/
-/*}*/
-
-/*伪类遮罩层透明*/
-#page-header::before {
-    background: transparent !important;
-}
-
-/*footer透明*/
-#footer {
-    background: transparent !important;
-    /*background: rgba(255, 255, 255, 0.8);*/
-}
-
-/* 夜间模式伪类遮罩层透明 */
-[data-theme="dark"]
-#footer::before {
-    background: transparent !important;
-}
-
-[data-theme="dark"]
-#page-header::before {
-    background: transparent !important;
-}
-
-/* --------------------文章目录虚拟化-------------------- */
-/* 文章目录 */
-#aside-content #card-toc .toc-content {
-    margin: 10px -18px;
-}
-
-#aside-content #card-toc .toc-content .toc-link.active {
-    line-height: 1.2;
-    border-radius: 12px;
-    color: #49b1f5;
-    background: transparent;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-[data-theme=dark] #aside-content #card-toc .toc-content .toc-link.active {
-    line-height: 1.2;
-    border-radius: 12px;
-    color: #49b1f5;
-    background: transparent;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-[data-theme=dark].toc .toc-item.active .toc-link .toc-text {
-    color: white;
-}
-
-#aside-content #card-toc .toc-content .toc-item.active .toc-link {
-    opacity: 1;
-    border-radius: 8px;
-}
-
-#aside-content #card-toc .toc-content .toc-link {
-    line-height: 1.2;
-    padding: 8px;
-    border-left: 0px solid transparent;
-    border-radius: 12px;
-    cursor: default;
-}
-
-#aside-content #card-toc .toc-content .toc-link:not(.active) span {
-    opacity: 0.6;
-    cursor: pointer;
-    filter: blur(1px);
-    transition: 0.3s;
-}
-
-#aside-content #card-toc:hover .toc-content .toc-link:not(.active) span {
-    filter: blur(0px);
-    opacity: 1;
-}
-
-/*#aside-content #card-toc .toc-content .toc-link:not(.active) span:hover {*/
-/*  color: var(--heo-lighttext);*/
-/*}*/
-
-/* --------------------版权卡片调整-------------------- */
-/*版权卡片*/
-#post .post-copyright {
-    position: relative;
-    margin: 2rem 0 0.5rem;
-    padding: 1.5rem 0.8rem;
-    border: 0px solid #eee; /*卡片边框*/
-    border-radius: 20px; /*边框圆角*/
-
-    /*默认就是hover的样式*/
-    -webkit-box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
-
-}
-
-#post .post-copyright:before {
-    position: absolute;
-    top: -1.9rem; /*C位置*/
-    color: #49b1f540; /*C颜色*/
-    font-size: 6rem; /*C大小*/
-}
-
 /* --------------------aplayer播放器样式-------------------- */
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
     /* 默认情况下缩进左侧66px，只留一点箭头部分 */
@@ -229,92 +81,6 @@
     width: 330px !important;
 }
 
-/* --------------------侧边栏归档样式-------------------- */
-span.card-archive-list-count {
-    width: auto;
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 0.9;
-    font-weight: 700;
-}
-
-.card-archive-list-count-group {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span:last-child {
-    width: fit-content;
-    margin-left: 4px;
-}
-
-.card-archive-list-date {
-    font-size: 14px;
-    opacity: 0.6;
-}
-
-li.card-archive-list-item {
-    width: 100%;
-    flex: 0 0 48%;
-}
-
-#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover {
-    color: white;
-    /*background-color: #49b1f5;*/
-    box-shadow: #3b70fc;
-    border-radius: 8px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border: 1px solid transparent;
-}
-
-@media screen and (min-width: 1300px) {
-    #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover {
-        transform: scale(1.03);
-    }
-
-    #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:active {
-        transform: scale(0.97);
-    }
-}
-
-#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a {
-    border-radius: 8px;
-    margin: 4px 0;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    border: 1px solid #e3e8f7;
-}
-
-[data-theme="dark"] #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a {
-    border-radius: 8px;
-    margin: 4px 0;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    border: 1px solid #42444a;
-}
-
-#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span:first-child {
-    width: auto;
-    flex: inherit;
-}
-
-#aside-content .card-archives ul.card-archive-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* --------------------标签页新增计数样式-------------------- */
-.tag-cloud-list a sup {
-    opacity: 0.6;
-    margin-left: 2px;
-}
-
 /* --------------------Twikoo评论样式-------------------- */
 #twikoo .tk-content {
     background: rgb(235 235 235 / 30%);
@@ -322,152 +88,17 @@ li.card-archive-list-item {
     border-radius: 10px;
 }
 
-.tk-nick.tk-nick-link {
-    color: #49b1f5 !important;
-}
-
-/* 设置文字内容 :nth-child(1)的作用是选择第几个 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
-    content: '输入QQ号会自动获取昵称和头像🐧';
-}
-
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
-    content: '收到回复将会发送到您的邮箱💌';
-}
-
-.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-    content: '可以通过昵称访问您的网站🔗';
-}
-
-/* 当用户点击输入框时显示 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
-.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
-    display: block;
-}
-
-/* 主内容区 */
+/*!* 主内容区 *!*/
 .el-input.el-input--small.el-input-group.el-input-group--prepend::before {
-    /* 先隐藏起来 */
-    display: none;
-    /* 绝对定位 */
-    position: absolute;
-    /* 向上移动60像素 */
-    top: -60px;
-    /* 文字强制不换行，防止left:50%导致的文字换行 */
-    white-space: nowrap;
-    /* 圆角 */
-    border-radius: 8px;
-    /* 距离左边50% */
-    left: 50%;
-    /* 然后再向左边挪动自身的一半，即可实现居中 */
-    transform: translate(-50%);
-    /* 填充 */
-    padding: 14px 18px;
-    background: #444;
-    color: #fff;
-}
-
-/* 小角标 */
-.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
-    display: none;
-    content: '';
-    position: absolute;
-    /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
-    我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
-    border: 12px solid transparent;
-    border-top-color: #444;
-    left: 50%;
-    transform: translate(-50%, -48px);
-}
-
-/* --------------------首页卡片头像呼吸灯-------------------- */
-[data-theme="light"] .avatar-img {
-    animation: breathe_light 4s ease-in-out infinite;
-}
-
-[data-theme="dark"] .avatar-img {
-    animation: breathe_dark 4s ease-in-out infinite;
-}
-
-@keyframes breathe_light {
-    0% {
-        box-shadow: 0 0 1px 1px #e9f5fa;
-    }
-    50% {
-        box-shadow: 0 0 5px 5px #e9f5fa;
-    }
-    100% {
-        box-shadow: 0 0 1px 1px #e9f5fa;
-    }
-}
-
-@keyframes breathe_dark {
-    0% {
-        box-shadow: 0 0 1px 1px #49b1f5;
-    }
-    50% {
-        box-shadow: 0 0 5px 5px #49b1f5;
-    }
-    100% {
-        box-shadow: 0 0 1px 1px #49b1f5;
-    }
-}
-
-/* --------------------评论表情包放大-------------------- */
-#owo-big {
-    position: fixed;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    border: 1px #aaa solid;
-    border-radius: 10px;
-    z-index: 9999;
-    display: none;
-    transform: translate(0, -105%);
-    overflow: hidden;
-    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
-}
-
-[data-theme=dark] #owo-big {
-    background-color: #4a4a4a
-}
-
-#owo-big img {
-    width: 100%;
-}
-
-@keyframes owoIn {
-    0% {
-        transform: translate(0, -95%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, -105%);
-        opacity: 1;
-    }
+    top: -54px;
 }
 
 /* --------------------首页飞机操作样式-------------------- */
-.planeOpt kbd {
-    margin: 0 3px;
-    padding: 3px 5px;
-    border: 1px solid #b4b4b4;
-    border-radius: 3px;
-    background-color: #f8f8f8;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 2px 1px 0 rgba(255, 255, 255, .6) inset;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 2px 1px 0 rgba(255, 255, 255, .6) inset;
-    color: #34495e;
-    white-space: nowrap;
-    font-weight: 600;
-    font-size: .9em;
-    font-family: Monaco, 'Ubuntu Mono', monospace;
-    line-height: 1em;
-}
-
 .planeOpt button {
     cursor: pointer;
     font-family: inherit;
     font-size: 12px;
-    background: #49b1f5;
+    background: #667AF2;
     color: white;
     padding: 0.5em 1em;
     display: flex;
@@ -523,95 +154,23 @@ li.card-archive-list-item {
 .input--filled .hbe-input-label-xray,
 .hbe-input-field-shrink:focus + .hbe-input-label-shrink .hbe-input-label-content-shrink,
 .input--filled .hbe-input-label-shrink .hbe-input-label-content-shrink {
-    color: #49b1f5 !important;
+    color: #667AF2 !important;
 }
 
 .hbe-graphic-xray,
 .hbe-input-field-xray:focus ~ .hbe-graphic-xray,
 .input--filled .graphic-xray {
-    stroke: #49b1f5 !important;
+    stroke: #667AF2 !important;
 }
 
 .hbe-input-field-shrink:focus + .hbe-input-label-shrink::after,
 .input--filled .hbe-input-label-shrink::after {
-    background: #49b1f5 !important;
+    background: #667AF2 !important;
 }
 
-/* --------------------分类标签bar样式-------------------- */
-#tag-bar,
-#category-bar {
-    padding: .4rem .8rem;
-    border-radius: 8px;
-    display: flex;
-    background-color: #e8f5fd;
-    margin-bottom: 1rem;
-    justify-content: space-between;
+/* --------------------友链页推荐博客样式-------------------- */
+#article-container .telescopic-site-card-group .site-card {
+    width: calc(100% / 5 - 16px);
 }
-
-#tag-bar i,
-#category-bar i {
-    line-height: inherit;
-}
-
-#tag-bar-list,
-#category-bar-list {
-    /* 分类/标签较少时，可以选择不设置 width，居中显示 catalog-list-item */
-    width: 100%;
-    margin: 0 .5rem;
-    display: flex;
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-
-#tag-bar-list::-webkit-scrollbar,
-#category-bar-list::-webkit-scrollbar {
-    display: none;
-}
-
-.tag-bar-item a,
-.category-bar-item a {
-    margin: 0 .2em;
-    padding: 0.2em 0.3em 0.3em;
-    font-weight: bold;
-    border-radius: 8px;
-    color: var(--font-color);
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.tag-bar-item:hover a,
-.category-bar-item:hover a {
-    background: #fff;
-    color: var(--font-color);
-}
-
-.tag-bar-item.selected a,
-.category-bar-item.selected a {
-    background: #fff;
-    color: var(--font-color);
-}
-
-a.tag-more,
-a.category-more {
-    min-width: fit-content;
-    font-weight: bold;
-    color: var(--font-color);
-}
-
-a.tag-more:hover,
-a.category-more:hover {
-    color: #49B1F5;
-}
-
-
-.tag-bar-item a sup,
-.category-bar-item a sup {
-    opacity: 0.6;
-    margin-left: 2px;
-}
-
 
 
