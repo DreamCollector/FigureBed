@@ -1,6 +1,6 @@
 {
   "name": "pzai-staticr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Pzai静态资源",
   "main": "index.js",
   "scripts": {
